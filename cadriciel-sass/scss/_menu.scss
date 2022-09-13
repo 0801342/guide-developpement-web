@@ -32,6 +32,20 @@
     background-color: darkmagenta;
 }
 
+.nav__control:before{
+    display: inline-block;
+    content:"";
+    width:1em;
+    height:1em;
+    background-image: url("../images/ico-fermer.svg");
+    vertical-align: top;
+    margin-right: .25em;
+}
+.nav--closed .nav__control:before{
+    /* compléter pour afficher l’icône Hamburger */
+    background-image: url("../images/ico-menu.svg");
+}
+
 .nav__control:focus {
     /* En mettant la règle outline: none;, les styles du navigateur
      * pour les éléments en cours de focus sont effacés. Il faut alors
@@ -59,6 +73,12 @@
     .nav__list-item {
         display: inline-block;
     }
+}
+
+/* Icone du menu */
+.nav__icon {
+    width: 20px;
+    height: 20px;
 }
 
 /* Liens du menu */

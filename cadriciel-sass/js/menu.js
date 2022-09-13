@@ -11,6 +11,7 @@
 
 let menu = {
   javascriptEnabled: document.body.classList.add('js'),
+//  refImg: "<img class='nav__icon' src='images/ico-menu.svg'>",
   strNavClosed: 'Menu',
   strNavOpen: 'Fermer',
   refButton: null,
@@ -23,13 +24,17 @@ let menu = {
     // On crée VIRTUELLEMENT un bouton et un span (pour le texte du bouton)
     this.refButton = document.createElement('button');
     this.refSpan = document.createElement('span');
+    this.refImg = document.createElement('img');
 
     // On ajoute le span dans le bouton
     this.refButton.appendChild(this.refSpan);
+    this.refButton.appendChild(this.refImg);
 
     // On ajoute des classes au Button et au span
     this.refButton.className = 'nav__control';
     this.refSpan.className = 'nav__span';
+    this.refImg.className = 'nav__icon';
+    this.refImg.src = "images/ico-menu.svg";
 
     // Ajout des attributs d'accessibilités
     this.refNav.setAttribute("aria-label","Menu Principal");
@@ -60,8 +65,10 @@ let menu = {
     // On change le texte du bouton selon l'état du menu
     if (this.refNav.classList.contains('nav--closed')) {
       this.refSpan.innerHTML = this.strNavClosed;
+      this.refImg.src = "images/ico-menu.svg";
     } else {
       this.refSpan.innerHTML = this.strNavOpen;
+      this.refImg.src = "images/ico-fermer.svg";
     }
   }
 };
