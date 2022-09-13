@@ -80,6 +80,15 @@ header {
 }
 
 /*** Contenus principal et complémentaire ***/
+nav__control{
+    float: left;
+}
+
+/* Icone du menu */
+.nav__icon {
+    max-width: 20px;
+    height: 20px;
+}
 
 aside {
     padding: 0 1rem 0;
